@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Virtual Reporter Concept Paper - Qatar News Agency</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #1e293b;
+      background-color: #f8fafc;
+      font-size: 10pt;
+      line-height: 1.5;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      padding: 18mm 20mm;
+      margin: 0 auto;
+      background: #ffffff;
+      position: relative;
+      page-break-after: always;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header Masthead */
+    .header {
+      border-bottom: 3px solid #800020; /* Qatari Maroon Accent */
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .header-title h1 {
+      font-size: 20pt;
+      color: #800020;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+    }
+
+    .header-title h2 {
+      font-size: 12pt;
+      color: #475569;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .header-meta {
+      text-align: right;
+      font-size: 8.5pt;
+      color: #64748b;
+    }
+
+    .header-meta strong {
+      color: #0f172a;
+    }
+
+    /* Grid Sections */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #800020;
+      padding: 12px 14px;
+      border-radius: 4px;
+    }
+
+    .card-title {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #800020;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    /* Section Styling */
+    .section-heading {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #0f172a;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 4px;
+      margin-top: 14px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    p {
+      margin-bottom: 8px;
+      color: #334155;
+      text-align: justify;
+    }
+
+    ul {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 5px;
+      color: #334155;
+    }
+
+    ul li::before {
+      content: "■";
+      color: #800020;
+      font-size: 6pt;
+      position: absolute;
+      left: 0;
+      top: 2px;
+    }
+
+    ul li strong {
+      color: #0f172a;
+    }
+
+    /* Demo Visuals Section */
+    .demo-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 10px;
+      margin-bottom: 12px;
+    }
+
+    .demo-card {
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .demo-card img {
+      width: 100%;
+      height: auto;
+      max-height: 230mm; /* Ensures complete uncropped vertical ratio */
+      object-fit: contain;
+      border-radius: 4px;
+      border: 1px solid #e2e8f0;
+      display: block;
+      margin: 0 auto 6px auto;
+    }
+
+    .demo-caption {
+      font-size: 8pt;
+      color: #475569;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: auto;
+      padding-top: 8px;
+      border-top: 1px solid #e2e8f0;
+      display: flex;
+      justify-content: space-between;
+      font-size: 8pt;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1 -->
+  <div class="page">
+    <div class="header">
+      <div class="header-title">
+        <h1>Concept Paper</h1>
+        <h2>Virtual Reporter Initiative</h2>
+      </div>
+      <div class="header-meta">
+        <p><strong>Proposing Entity:</strong> Qatar News Agency (QNA)</p>
+        <p><strong>Sector:</strong> Media & AI Technology</p>
+        <p><strong>Status:</strong> Production & Development</p>
+      </div>
+    </div>
+
+    <div class="section-heading">Initiative Overview</div>
+    <p>
+      The Virtual Reporter concept represents an innovative media initiative that fuses authentic on-location cinematography with an intelligent digital presenter embedded directly into captured scenes. The program aims to transform field coverage by delivering a fresh visual experience that preserves journalistic credibility while deploying artificial intelligence capabilities for scalable media content generation.
+    </p>
+    <p>
+      By filming actual events and landmarks across Qatar, a specialized digital presenter is seamlessly integrated into footage as an on-ground reporter delivering brief news segments, event highlights, and key contextual details. This model expands operational capacity for versatile content creation while maintaining local identity and editorial rigour.
+    </p>
+
+    <div class="grid-2" style="margin-top: 12px;">
+      <div class="card">
+        <div class="card-title">Hybrid Reporting Model</div>
+        <p style="font-size: 8.5pt; margin: 0;">
+          Combines authentic, high-quality field filming with an AI-synthesized presenter. Footage and surroundings remain 100% genuine while digital characters deliver commentary.
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-title">Consistent Persona</div>
+        <p style="font-size: 8.5pt; margin: 0;">
+          Features a dedicated anchor persona with fixed visual features, voice, and presence—fostering long-term viewer recognition, trust, and alignment with corporate identity.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-heading">Core Technical & Strategic Elements</div>
+    <ul>
+      <li><strong>Realistic Field Filming:</strong> Professional on-location execution capturing authentic environments, lighting, and event details.</li>
+      <li><strong>In-Scene Visual Compositing:</strong> Advanced spatial placement matching light, camera angles, scales, and shadows for seamless environmental integration.</li>
+      <li><strong>Voice & Expression Synchronization:</strong> Lip-syncing and gesture alignment driven by text-to-speech engine outputs tuned for natural delivery.</li>
+      <li><strong>Editorial Governance:</strong> Human oversight at every stage, requiring script, audio, and visual validation prior to broadcast.</li>
+      <li><strong>Periodic Output:</strong> Phase-one rollout targeting a weekly produced episode linked to significant national locations or events.</li>
+    </ul>
+
+    <div class="section-heading">Strategic Impact & Capabilities</div>
+    <ul>
+      <li><strong>Digital Transformation:</strong> Promotes responsible, practical applications of generative media within news workflows.</li>
+      <li><strong>Resource Optimization:</strong> Reuses a consistent digital presenter across multiple assignments, reducing physical staging setups.</li>
+      <li><strong>Multi-Platform Reach:</strong> Generates concise video assets optimized for web, social media channels, and public digital displays.</li>
+      <li><strong>Cultural Representation:</strong> Employs a presenter persona reflecting local culture, language nuances, and professional standards.</li>
+    </ul>
+
+    <div class="footer">
+      <span>Qatar News Agency (QNA) — Confidential Executive Briefing</span>
+      <span>Page 1 of 2</span>
+    </div>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="page">
+    <div class="header">
+      <div class="header-title">
+        <h1>Visual Proof of Concept</h1>
+        <h2>Virtual Reporter Initiative</h2>
+      </div>
+      <div class="header-meta">
+        <p><strong>Document ID:</strong> QNA-AI-2026-V1</p>
+      </div>
+    </div>
+
+    <p style="margin-bottom: 10px;">
+      The following frame captures showcase full-body and medium-shot visual compositing tests, highlighting how the dedicated digital presenter adapts to both indoor organizational settings and outdoor live event environments.
+    </p>
+
+    <!-- FULL UNCROPPED DEMO IMAGES -->
+    <div class="demo-container">
+      <div class="demo-card">
+        <img src="image.png" alt="Indoor Office Demonstration">
+        <div class="demo-caption">
+          <strong>Indoor Environment Demonstration</strong><br>
+          Full-body compositing within an official agency office (UNHCR context), demonstrating proper scale, shadow drop, and brand placement.
+        </div>
+      </div>
+      <div class="demo-card">
+        <img src="image_2.png" alt="Outdoor Event Demonstration">
+        <div class="demo-caption">
+          <strong>Outdoor Live Event Demonstration</strong><br>
+          Medium-shot compositing at a sports marathon start line, showcasing realistic lighting integration and dynamic backdrop coordination.
+        </div>
+      </div>
+    </div>
+
+    <div class="section-heading">Scalability & Expansion Roadmap</div>
+    <p>
+      Designed for iterative growth, the framework launches with structured weekly output to evaluate viewer engagement and refine performance models. Future development phases will establish a standardized asset repository containing facial rigs, voice sets, and gesture templates tied directly to editorial roadmaps.
+    </p>
+
+    <div class="section-heading">Conclusion</div>
+    <p>
+      The Virtual Reporter concept delivers a practical, forward-looking paradigm for modern journalism. By combining genuine field production with AI spatial integration, Qatar News Agency sets a benchmark for responsible digital transformation and innovative visual storytelling across the region.
+    </p>
+
+    <div class="footer">
+      <span>Qatar News Agency (QNA) — Strategic Media Development</span>
+      <span>Page 2 of 2</span>
+    </div>
+  </div>
+
+</body>
+</html>
